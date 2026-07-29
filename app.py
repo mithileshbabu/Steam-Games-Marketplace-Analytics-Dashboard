@@ -21,6 +21,15 @@ def load_data():
 
 df = load_data()
 
+st.write("Release Year Min:", df["Release Year"].min())
+st.write("Release Year Max:", df["Release Year"].max())
+
+st.write(
+    df[["Release Date", "Release Year"]]
+    .sort_values("Release Year")
+    .head(10)
+)
+
 # -------------------------
 # Data Cleaning
 # -------------------------
