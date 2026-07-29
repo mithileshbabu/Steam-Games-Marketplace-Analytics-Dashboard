@@ -20,7 +20,9 @@ def load_data():
     return pd.read_csv("data/merged_data.csv")
 
 df = load_data()
-
+#temp
+st.write(df.columns.tolist())
+st.write(df.head())
 # -------------------------
 # Data Cleaning
 # -------------------------
