@@ -83,8 +83,8 @@ Steam-Games-Marketplace-Analytics-Dashboard
 ├── app.py
 ├── README.md
 ├── requirements.txt
-```
 
+```
 ## How to Run
 
 1. Clone the repository.
