@@ -21,15 +21,6 @@ def load_data():
 
 df = load_data()
 
-st.write("Release Year Min:", df["Release Year"].min())
-st.write("Release Year Max:", df["Release Year"].max())
-
-st.write(
-    df[["Release Date", "Release Year"]]
-    .sort_values("Release Year")
-    .head(10)
-)
-
 # -------------------------
 # Data Cleaning
 # -------------------------
@@ -47,6 +38,15 @@ df["Price"] = pd.to_numeric(df["Price"], errors="coerce")
 # Release Year
 df["Release Date"] = pd.to_datetime(df["Release Date"], errors="coerce")
 df["Release Year"] = df["Release Date"].dt.year
+
+st.write("Release Year Min:", df["Release Year"].min())
+st.write("Release Year Max:", df["Release Year"].max())
+
+st.write(
+    df[["Release Date", "Release Year"]]
+    .sort_values("Release Year")
+    .head(10)
+)
 
 # -------------------------
 # Sidebar Filters
