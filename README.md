@@ -66,12 +66,23 @@ The dataset contains information about Steam games, including:
 ## Repository Structure
 
 ```
-Steam-Games-Marketplace-Analytics-Dashboard/
-├── data/
-├── notebook/
+Steam-Games-Marketplace-Analytics-Dashboard
+│
+├── data
+│   └── merged_data.csv
+│
+├── images
+│   ├── dashboard_home.png
+│   ├── release_trend.png
+│   ├── top_developers.png
+│   └── scatter_plot.png
+│
+├── notebook
 │   └── analysis.ipynb
+│
+├── app.py
 ├── README.md
-└── requirements.txt
+├── requirements.txt
 ```
 
 ## How to Run
