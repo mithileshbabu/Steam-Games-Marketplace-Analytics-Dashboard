@@ -23,6 +23,7 @@ df = load_data()
 #temp
 st.write(df.columns.tolist())
 st.write(df.head())
+#temp
 # -------------------------
 # Data Cleaning
 # -------------------------
@@ -40,16 +41,17 @@ df["Price"] = pd.to_numeric(df["Price"], errors="coerce")
 # Release Year
 df["Release Date"] = pd.to_datetime(df["Release Date"], errors="coerce")
 df["Release Year"] = df["Release Date"].dt.year
-
+#temp
 st.write("Release Year Min:", df["Release Year"].min())
 st.write("Release Year Max:", df["Release Year"].max())
 
 st.write(
-    df[["Release Date", "Release Year"]]
-    .sort_values("Release Year")
-    .head(10)
+    df[
+        (df["Release Year"] < 1997) |
+        (df["Release Year"] > 2026)
+    ][["Title", "Release Date", "Release Year"]]
 )
-
+#temp
 # -------------------------
 # Sidebar Filters
 # -------------------------
